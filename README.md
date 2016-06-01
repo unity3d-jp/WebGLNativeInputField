@@ -1,2 +1,0 @@
-# WebGLNativeInputField
-Unityでネイティブの入力を可能にします
