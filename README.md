@@ -5,7 +5,9 @@ Javascriptのwindow.promptを呼び出すことによって実現しておりま
 使い方<br />
 InputFieldの代わりに、こちらで用意しました「WebGLNativeInputField」を利用下さい。<br />
 WEBGLで実行したときにのみNativeのインプットを利用するようになっています。<br />
-(ご利用はWebNativeInputFile.csだけでなく、Plugins以下もコピーして利用して下さい。
+(ご利用はWebNativeInputFile.csだけでなく、Plugins以下もコピーして利用して下さい。<br />
+<br />
+入力中はゲームの処理がブロックされるので、オンラインゲームのチャットのような用途ではご利用できないかもしれませんが、多くのケースでは役に立つと思い用意しました。
 
 
 実行デモは下記になります<br />
