@@ -1,4 +1,19 @@
 # WebGLNativeInputField
+## in English
+Using this , you can use IME on Unity WebGL content.<br />
+You can do "copy&paste" or input some characters which depends on IME.<br />
+<br />
+This system calls "window.prompt" which is javascript native function.<br />
+<br />
+How to Use<br />
+Replace "UnityEngine.UI.InputFiled" to "WebGLNativeInputField" which I made.<br />]
+
+Demo is follow.
+https://unity3d-jp.github.io/WebGLNativeInputField/ <br />
+Lower Field is "InputField" which is Unity standard UI System.
+Upper Field is "WebGLNativeInputField" which I made.
+
+##日本語説明
 UnityのWebGLで日本語入力を可能にします。<br />
 Javascriptのwindow.promptを呼び出すことによって実現しております。<br />
 <br />
