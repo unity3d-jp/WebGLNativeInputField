@@ -5,13 +5,13 @@ using System.Collections;
 
 public class WebGLNativeInputField : UnityEngine.UI.InputField
 {
-    public string dialogTitle = "Input Text";
+    public string m_DialogTitle = "Input Text";
 
 #if UNITY_WEBGL && !UNITY_EDITOR
 
     public override void OnSelect(BaseEventData eventData)
     {
-        this.text = WebNativeDialog.OpenNativeStringDialog(dialogTitle, this.text);
+        this.text = WebNativeDialog.OpenNativeStringDialog(m_DialogTitle, this.text);
         StartCoroutine(this.DelayInputDeactive());
     }
     private IEnumerator DelayInputDeactive()
