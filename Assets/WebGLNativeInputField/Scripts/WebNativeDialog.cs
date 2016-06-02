@@ -2,22 +2,62 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 
-public class WebNativeDialog {
+public class WebNativeDialog
+{
+#if UNITY_WEBGL && !UNITY_EDITOR
     [DllImport("__Internal")]
     private static extern string NativeDialogPrompt(string title, string defaultValue);
+    [DllImport("__Internal")]
+    private static extern string SetupOverlayDialogHtml(string title , string defaultValue,string okBtnText,string cancelBtnText);
 
-    /// <summary>
-    /// ネイティブの文字列入力のダイアログを出します
-    /// </summary>
-    /// <param name="title">ダイアログタイトル名</param>
-    /// <param name="defaultValue">デフォルト値</param>
-    /// <returns></returns>
+    [DllImport("__Internal")]
+    private static extern bool IsOverlayDialogHtmlActive();
+    [DllImport("__Internal")]
+    private static extern bool IsOverlayDialogHtmlCanceled();
+    [DllImport("__Internal")]
+    private static extern string GetOverlayHtmlInputFieldValue();
+#endif
+
     public static string OpenNativeStringDialog(string title, string defaultValue)
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
         return NativeDialogPrompt(title, defaultValue);
 #else
         return defaultValue;
+#endif
+    }
+
+    public static void SetUpOverlayDialog(string title, string defaultValue, string okBtnText, string cancelBtnText)
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        SetupOverlayDialogHtml(title, defaultValue,okBtnText,cancelBtnText);
+#else
+#endif
+    }
+
+    public static bool IsOverlayDialogActive()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        return IsOverlayDialogHtmlActive();
+#else
+        return false;
+#endif
+    }
+
+    public static bool IsOverlayDialogCanceled()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        return IsOverlayDialogHtmlCanceled();
+#else
+        return false;
+#endif
+    }
+    public static string GetOverlayDialogValue()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        return GetOverlayHtmlInputFieldValue();
+#else
+        return "";
 #endif
     }
 }
