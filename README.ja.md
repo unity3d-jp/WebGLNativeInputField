@@ -1,5 +1,5 @@
 # WebGLNativeInputField
-Read this in other languages: [English(README.md)], 日本語<br />
+Read this in other languages: [English](README.md), 日本語<br />
 <br />
 ## 概要
 
