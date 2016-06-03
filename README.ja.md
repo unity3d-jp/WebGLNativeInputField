@@ -1,8 +1,11 @@
+# WebGLNativeInputField
+Read this in other languages: [English(README.md)], 日本語<br />
+<br />
+## 概要
 
-##日本語説明
 UnityのWebGLで日本語入力を可能にします。<br />
 <br />
-### 使い方<br />
+## 使い方<br />
 InputFieldの代わりに、こちらで用意しました「WebGLNativeInputField」を利用下さい。<br />
 WEBGLで実行したときにのみNativeのインプットを利用するようになっています。<br />
 ![alt text](doc/HowToUse1.png) <br />
@@ -18,7 +21,7 @@ WEBGLで実行したときにのみNativeのインプットを利用するよう
 ![alt text](doc/HowToUse4.png)<br />
 <br />
 
-### 実行デモは下記になります<br />
+## 実行デモは下記になります<br />
 https://unity3d-jp.github.io/WebGLNativeInputField/ <br />
 
 このように動きます
