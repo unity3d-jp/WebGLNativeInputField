@@ -3,7 +3,7 @@
 Using this , you can use IME on Unity WebGL content.<br />
 You can do "copy&paste" or input some characters which depends on IME.<br />
 <br />
-How to Use<br />
+### How to Use<br />
 Replace "UnityEngine.UI.InputFiled" to "WebGLNativeInputField" which I made.<br />
 ![alt text](doc/HowToUse1.png) <br />
 <br />
@@ -19,7 +19,7 @@ You can choose which one on Inspector.<br />
 ![alt text](doc/HowToUse4.png)
 <br />
 
-Demo is follow.<br />
+### Demo is follow.<br />
 https://unity3d-jp.github.io/WebGLNativeInputField/ <br />
 
 Demo is working like this.
@@ -28,7 +28,7 @@ Demo is working like this.
 ##日本語説明
 UnityのWebGLで日本語入力を可能にします。<br />
 <br />
-使い方<br />
+### 使い方<br />
 InputFieldの代わりに、こちらで用意しました「WebGLNativeInputField」を利用下さい。<br />
 WEBGLで実行したときにのみNativeのインプットを利用するようになっています。<br />
 ![alt text](doc/HowToUse1.png) <br />
@@ -44,7 +44,7 @@ WEBGLで実行したときにのみNativeのインプットを利用するよう
 ![alt text](doc/HowToUse4.png)<br />
 <br />
 
-実行デモは下記になります<br />
+### 実行デモは下記になります<br />
 https://unity3d-jp.github.io/WebGLNativeInputField/ <br />
 
 このように動きます
