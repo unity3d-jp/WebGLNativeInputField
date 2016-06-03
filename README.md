@@ -1,9 +1,10 @@
 # WebGLNativeInputField
+Read this in other languages: English, [日本語](README.ja.md)<br />
+<br />
+## About this
 Using this , you can use IME on Unity WebGL content.<br />
 You can do "copy&paste" or input some characters which depends on IME.<br />
 <br />
-
-Read this in other languages: English, [日本語](README.ja.md)
 
 ## How to Use<br />
 Replace "UnityEngine.UI.InputFiled" to "WebGLNativeInputField" which I made.<br />
