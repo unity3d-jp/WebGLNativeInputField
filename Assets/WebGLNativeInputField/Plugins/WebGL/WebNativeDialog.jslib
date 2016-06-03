@@ -16,7 +16,7 @@
     okBtnText = Pointer_stringify(okBtnText);
     cancelBtnText = Pointer_stringify(cancelBtnText);
     if( !document.getElementById("nativeInputDialog" ) ){
-      var html = '<div id="nativeInputDialog" style="background:#000000;opacity:0.9;width:100%;height:100%;position:fixed;">' + 
+      var html = '<div id="nativeInputDialog" style="background:#000000;opacity:0.9;width:100%;height:100%;position:fixed;top:0%;z-index:2147483647;">' + 
                '  <div style="position:relative;top:30%;" align="center" vertical-align="middle">' + 
                '    <div id="nativeInputDialogTitle" style="color:#ffffff;">Here is title</div>' + 
                '    <div>' + 
@@ -37,10 +37,12 @@
       // set Event
       var okFunction = 
         'document.getElementById("nativeInputDialog" ).style.display = "none";' + 
-        'document.getElementById("nativeInputDialogCheck").checked = false;';
+        'document.getElementById("nativeInputDialogCheck").checked = false;' +
+        'document.getElementById("canvas").style.display="";';
       var cancelFunction = 
         'document.getElementById("nativeInputDialog" ).style.display = "none";'+ 
-        'document.getElementById("nativeInputDialogCheck").checked = true;';
+        'document.getElementById("nativeInputDialogCheck").checked = true;'+
+        'document.getElementById("canvas").style.display="";';
 
       var inputField = document.getElementById("nativeInputDialogInput");
       inputField.setAttribute( "onsubmit" , okFunction );
@@ -54,8 +56,12 @@
 
     document.getElementById("nativeInputDialogOkBtn").value = okBtnText;
     document.getElementById("nativeInputDialogCancelBtn").value = cancelBtnText;
-
     document.getElementById("nativeInputDialog" ).style.display = "";
+  },
+  HideUnityScreenIfHtmlOverlayCant:function(){
+    if( navigator.userAgent.indexOf("Chrome/") < 0 ){
+      document.getElementById("canvas").style.display="none";
+    }
   },
   IsOverlayDialogHtmlActive:function(){
     var nativeDialog = document.getElementById("nativeInputDialog" );

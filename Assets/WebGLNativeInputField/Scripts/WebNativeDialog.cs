@@ -16,6 +16,8 @@ public class WebNativeDialog
     private static extern bool IsOverlayDialogHtmlCanceled();
     [DllImport("__Internal")]
     private static extern string GetOverlayHtmlInputFieldValue();
+    [DllImport("__Internal")]
+    private static extern void HideUnityScreenIfHtmlOverlayCant();
 #endif
 
     public static string OpenNativeStringDialog(string title, string defaultValue)
@@ -30,6 +32,10 @@ public class WebNativeDialog
     public static void SetUpOverlayDialog(string title, string defaultValue, string okBtnText, string cancelBtnText)
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
+        if (Screen.fullScreen)
+        {
+            HideUnityScreenIfHtmlOverlayCant();
+        }
         SetupOverlayDialogHtml(title, defaultValue,okBtnText,cancelBtnText);
 #else
 #endif
