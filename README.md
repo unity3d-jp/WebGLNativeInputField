@@ -9,7 +9,7 @@ Replace "UnityEngine.UI.InputFiled" to "WebGLNativeInputField" which I made.<br 
 <br />
 We prepared two method.<br />
 You can choose which one on Inspector.<br />
-![alt text](doc/HowToUse3.png)<br />
+![alt text](doc/HowToUse2.png)<br />
 <br />
 1.Popup dialog which is created by "window.prompt".<br />
 ![alt text](doc/HowToUse3.png)
