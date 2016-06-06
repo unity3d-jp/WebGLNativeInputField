@@ -18,6 +18,8 @@ public class WebNativeDialog
     private static extern string GetOverlayHtmlInputFieldValue();
     [DllImport("__Internal")]
     private static extern void HideUnityScreenIfHtmlOverlayCant();
+    [DllImport("__Internal")]
+    private static extern bool IsRunningOnEdgeBrowser();
 #endif
 
     public static string OpenNativeStringDialog(string title, string defaultValue)
@@ -34,12 +36,17 @@ public class WebNativeDialog
 #if UNITY_WEBGL && !UNITY_EDITOR
         if (Screen.fullScreen)
         {
-            HideUnityScreenIfHtmlOverlayCant();
+            if( IsRunningOnEdgeBrowser() ){
+                Screen.fullScreen = false;
+            }else{
+                HideUnityScreenIfHtmlOverlayCant();
+            }
         }
         SetupOverlayDialogHtml(title, defaultValue,okBtnText,cancelBtnText);
 #else
 #endif
     }
+
 
     public static bool IsOverlayDialogActive()
     {

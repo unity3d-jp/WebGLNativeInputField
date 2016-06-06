@@ -63,6 +63,12 @@
       document.getElementById("canvas").style.display="none";
     }
   },
+  IsRunningOnEdgeBrowser:function(){
+    if( navigator.userAgent.indexOf("Edge/") < 0 ){
+      return false;
+    }
+    return true;
+  },
   IsOverlayDialogHtmlActive:function(){
     var nativeDialog = document.getElementById("nativeInputDialog" );
     if( !nativeDialog ){
