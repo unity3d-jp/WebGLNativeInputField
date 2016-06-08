@@ -15,7 +15,17 @@
     defaultValue = Pointer_stringify(defaultValue);
     okBtnText = Pointer_stringify(okBtnText);
     cancelBtnText = Pointer_stringify(cancelBtnText);
+
+    if( !document.getElementById("nativeInputDialogInput" ) ){
+      // setup css
+      var style = document.createElement( 'style' );
+      style.setAttribute('id' , 'inputDialogTextSelect');
+      style.appendChild( document.createTextNode( '#nativeInputDialogInput::-moz-selection { background-color:#00ffff;}' ) );
+      style.appendChild( document.createTextNode( '#nativeInputDialogInput::selection { background-color:#00ffff;}' ) );
+      document.head.appendChild( style );
+    }
     if( !document.getElementById("nativeInputDialog" ) ){
+      // setup html
       var html = '<div id="nativeInputDialog" style="background:#000000;opacity:0.9;width:100%;height:100%;position:fixed;top:0%;z-index:2147483647;">' + 
                '  <div style="position:relative;top:30%;" align="center" vertical-align="middle">' + 
                '    <div id="nativeInputDialogTitle" style="color:#ffffff;">Here is title</div>' + 

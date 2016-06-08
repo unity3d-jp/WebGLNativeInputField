@@ -13,7 +13,7 @@ public class WebGLNativeInputField : UnityEngine.UI.InputField
     public string m_DialogTitle = "Input Text";
     public string m_DialogOkBtn = "OK";
     public string m_DialogCancelBtn = "Cancel";
-    public EDialogType m_DialogType = EDialogType.PromptPopup;
+    public EDialogType m_DialogType = EDialogType.OverlayHtml;
 
 #if UNITY_WEBGL && !UNITY_EDITOR 
 
